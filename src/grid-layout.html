@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="shortcut icon"
+      href="/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="m-10">
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1 class="my-5 text-3xl font-bold text-blue-950">그리드 레이아웃</h1>
+
+    <figure class="profile-card">
+      <img src="./assets/images/character-01.jpg" alt="" />
+      <figcaption>
+        <strong>Erin Lindford</strong>
+        <p>Product Engineer</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+          consectetur explicabo omnis fugit aspernatur aliquid commodi
+          architecto optio praesentium quasi ipsam, id natus ex tenetur. Eum
+          dignissimos nulla cumque provident.
+        </p>
+        <button type="button">Message</button>
+      </figcaption>
+    </figure>
+
+    <hr class="my-3" />
+
+    <div
+      class="border grid grid-cols-[100px_minmax(200px,1fr)] grid-rows-[50px]"
+    >
+      <strong class="text-xl text-blue-700">ChitChat</strong>
+      <p class="text-slate-400">You have a new message!</p>
+      <img
+        class="w-12 h-12 row-start-1 row-end-3 place-self-center"
+        src="./assets/images/chit-chat.svg"
+        alt=""
+      />
+    </div>
+    <div
+      class="border grid grid-cols-[minmax(200px,1fr)_100px] grid-rows-[50px_50px]"
+    >
+      <strong class="text-xl text-blue-700">ChitChat</strong>
+      <p class="text-slate-400">You have a new message!</p>
+      <img
+        class="w-12 h-12 row-span-2 row-start-1 col-start-2 place-self-center justify-self-end"
+        src="./assets/images/chit-chat.svg"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
