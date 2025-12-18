@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="shortcut icon"
+      href="/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="m-10">
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1 class="my-5 text-3xl font-bold text-blue-950">반응형 디자인</h1>
+
+    <figure
+      class="md:-order-1 sm:flex sm:gap-4 bg-white p-5 rounded-3xl border min-w-96"
+    >
+      <img
+        class="sm:shrink-0 sm:mx-0 w-24 h-24 rounded-full mx-auto"
+        src="./assets/images/character-01.jpg"
+        alt=""
+      />
+      <figcaption
+        class="sm:grow sm:items-start sm:mt-0 flex flex-col gap-2 items-center mt-3"
+      >
+        <p class="text-xl font-medium">Erin Lindford</p>
+        <p class="text-sm text-slate-400">Product Engineer</p>
+        <button
+          class="border px-4 py-2 rounded-full text-violet-500 hover:bg-violet-600 hover:text-white focus:bg-emerald-700 focus:text-white focus:outline-0 transform active:scale-95"
+          type="button"
+        >
+          Message
+        </button>
+      </figcaption>
+    </figure>
+
+    <hr class="my-3" />
+
+    <div class="border rounded-md p-4 pl-20 relative group">
+      <strong class="text-xl text-blue-700">ChitChat</strong>
+      <p class="text-slate-400 group-hover:text-red-500">
+        You have a new message!
+      </p>
+      <img
+        class="w-12 h-12 absolute top-4 left-4"
+        src="./assets/images/chit-chat.svg"
+        alt=""
+      />
+    </div>
+    <hr class="my-3" />
+
+    <div
+      class="border p-3 has-checked:bg-amber-300 dark:bg-slate-800 dark:text-slate-200"
+    >
+      <label for="pay">Google Pay</label>
+      <input id="pay" type="radio" class="checked:border-indigo-500" />
+    </div>
+  </body>
+</html>
