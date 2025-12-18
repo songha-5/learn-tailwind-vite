@@ -1,6 +1,41 @@
 @import "tailwindCss";
 @import "./likelion-theme.css" layer(theme);
 
+@utility shape-circle {
+  shape-outside: circle(50%);
+}
+/* @utility flex-center {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+} */
+
+@layer components {
+  .flex-center {
+    @apply flex flex-col justify-center items-center;
+  }
+  .profile-card {
+    @apply rounded-3xl border min-w-96 p-4 dark:text-white dark:bg-slate-600;
+    img {
+      @apply w-24 h-24 rounded-full float-left mr-3 mb-3 shape-circle;
+    }
+    figcaption {
+      @apply space-y-3;
+    }
+    strong {
+      @apply text-2xl font-bold hover:text-violet-700;
+    }
+    button {
+      @apply border px-2 rounded-full text-violet-500 dark:text-white dark:bg-violet-500;
+    }
+  }
+}
+
 :root {
   --color-euid: #ffc;
+}
+
+.avatar {
+  border: 5px solid red;
 }
