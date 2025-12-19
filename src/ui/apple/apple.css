@@ -1,0 +1,259 @@
+@import "tailwindCss";
+
+:root {
+  /* Color */
+  --white: #f5f5f7;
+  --black: #1d1d1f;
+  --red: #d11719;
+  --gray: #86868b;
+  --blue-100: #2997ff;
+  --blue-200: #0077ed;
+  --blue-300: #0071e3;
+  --blue-400: #006edb;
+
+  /* Box Size */
+  --size: 31.25rem; /* 500px - 카드 높이 고정 값 */
+
+  /* Text Size */
+  --xx-small-text: 0.75rem; /* 12px - Small Screen 버튼(링크) 글자 크기 */
+  --x-small-text: 0.875rem; /* 14px - Large Screen 버튼(링크) 글자 크기 */
+  --small-text: 1.0625rem; /* 17px - 출시일 추후 공개 글자 크기 (공통) */
+  --base-text: 1.1875rem; /* 19px - Small Screen 부제목 글자 크기 */
+  --medium-text: 1.3125rem; /* 21px - Large Screen 부제목 글자 크기 */
+  --large-text: 2rem; /* 32px - Small Screen 제목 글자 크기 */
+  --extra-large-text: 2.5rem; /* 40px - Large Screen 제목 글자 크기 */
+
+  /* Spacing */
+  --x-small-spacing: 0.5rem; /* 8px - 버튼(링크) 상,하단 안쪽 여백, 부제목 하단 여백 */
+  --small-spacing: 0.75rem; /* 12px - 카드 제목, 부제목, 버튼(링크)간 여백(gap), 버튼(링크) 좌,우 안쪽 여백 */
+  --base-spacing: 1rem; /* 16px - 2개의 버튼(링크) 사이 여백 (공통) */
+  --large-spacing: 2.5rem; /* 40px - Small Screen 상단 여백 */
+  --extra-large-spacing: 3.75rem; /* 60px - Large Screen 상단 여백 */
+
+  --line-normal: 1.5; /* 부제목 줄간격 */
+}
+
+body {
+  color: var(--black);
+  /* margin: 50px; */
+}
+
+/* 카드 컴포넌트 */
+.product-card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: 12px;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  block-size: 500px;
+  padding-block-start: 40px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+
+  &.dark-bg {
+    color: var(--white);
+    background-color: var(--black);
+  }
+
+  @media (min-width: 1024px) {
+    padding-block-start: 60px;
+    row-gap: 16px;
+    block-size: 625px;
+  }
+
+  .headline {
+    font-size: 32px;
+    line-height: 1;
+
+    @media (min-width: 1024px) {
+      font-size: 40px;
+    }
+  }
+
+  .description {
+    font-size: 19px;
+
+    &.line-break span {
+      display: block;
+      text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 21px;
+    }
+  }
+
+  .release {
+    font-size: 17px;
+    color: var(--gray);
+  }
+
+  .link-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 12px;
+
+    .fill,
+    .outline {
+      padding: 8px 12px;
+      font-size: 12px;
+      border-radius: 24px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 1px 2px var(--red);
+      }
+
+      @media (min-width: 1024px) {
+        padding: 12px 16px;
+        font-size: 14px;
+      }
+    }
+
+    .fill {
+      background: var(--black);
+      color: #fff;
+    }
+
+    .outline {
+      border: 1px solid currentColor;
+      color: var(--black);
+    }
+
+    &.link-blue {
+      .fill {
+        background: var(--blue-300);
+        color: #fff;
+
+        &:hover {
+          background: var(--blue-100);
+        }
+      }
+
+      .outline {
+        color: var(--blue-300);
+
+        &:hover {
+          color: var(--blue-100);
+        }
+      }
+    }
+  }
+}
+
+/* 카드 컴포넌트 별 배경 이미지 */
+.ipad-pro {
+  background-image: image-set(
+    url(/src/assets/apple/ipad_pro.jpeg) 1x,
+    url(/src/assets/apple/ipad_pro_2x.jpeg) 2x
+  );
+
+  @media (min-width: 1024px) {
+    background-image: image-set(
+      url(/src/assets/apple/ipad_pro_wide.jpeg) 1x,
+      url(/src/assets/apple/ipad_pro_wide_2x.jpeg) 2x
+    );
+  }
+}
+
+.ipad-air {
+  background-image: image-set(
+    url(/src/assets/apple/ipad_air.jpeg) 1x,
+    url(/src/assets/apple/ipad_air_2x.jpeg) 2x
+  );
+
+  @media (min-width: 1024px) {
+    background-image: image-set(
+      url(/src/assets/apple/ipad_air_wide.jpeg) 1x,
+      url(/src/assets/apple/ipad_air_wide_2x.jpeg) 2x
+    );
+  }
+}
+
+.iphone15-pro {
+  background-image: image-set(
+    url(/src/assets/apple/iphone15_pro.jpeg) 1x,
+    url(/src/assets/apple/iphone15_pro_2x.jpeg) 2x
+  );
+
+  @media (min-width: 1024px) {
+    background-image: image-set(
+      url(/src/assets/apple/iphone15_pro_wide.jpeg) 1x,
+      url(/src/assets/apple/iphone15_pro_wide_2x.jpeg) 2x
+    );
+  }
+}
+
+.iphone15 {
+  background-image: image-set(
+    url(/src/assets/apple/iphone15.jpeg) 1x,
+    url(/src/assets/apple/iphone15_2x.jpeg) 2x
+  );
+}
+
+.apple-watch {
+  background-image: image-set(
+    url(/src/assets/apple/apple_watch.jpeg) 1x,
+    url(/src/assets/apple/apple_watch_2x.jpeg) 2x
+  );
+}
+
+.macbook-air {
+  background-image: image-set(
+    url(/src/assets/apple/macbook_air.jpeg) 1x,
+    url(/src/assets/apple/macbook_air_2x.jpeg) 2x
+  );
+}
+
+.airpods-pro {
+  background-image: image-set(
+    url(/src/assets/apple/airpods_pro.jpeg) 1x,
+    url(/src/assets/apple/airpods_pro_2x.jpeg) 2x
+  );
+}
+
+/* image-set() 함수를 사용하지 않을 경우 - 미디어 쿼리 사용 */
+/* .ipad-pro {
+  background-image: url(/src/assets/apple/ipad_pro.jpeg);
+
+  @media (min-width: 1024px) {
+    background-image: url(/src/assets/apple/ipad_pro_wide.jpeg);
+  }
+}
+
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi){ 
+
+  .ipad-pro {
+    background-image: url(/src/assets/apple/ipad_pro_2x.jpeg);
+
+  @media (min-width: 1024px) {
+      background-image:  url(/src/assets/apple/ipad_pro_wide_2x.jpeg);
+    }
+  }
+} */
+
+/* 카드 레이아웃 */
+.product-list {
+  --column-count: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), minmax(300px, 1fr));
+  gap: 20px;
+
+  @media (min-width: 1024px) {
+    --column-count: 2;
+
+    .ipad-pro,
+    .ipad-air,
+    .iphone15-pro {
+      grid-column: span 2;
+    }
+  }
+}

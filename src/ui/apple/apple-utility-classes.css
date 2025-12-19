@@ -1,0 +1,157 @@
+@theme {
+  --font-sans: "Pretendard Variable", sans-serif;
+
+  /* 애플 페이지 제작을 위한 커스텀 속성 */
+  /* Color */
+  --color-apple-white: #f5f5f7;
+  --color-apple-black: #1d1d1f;
+  --color-apple-red: #d11719;
+  --color-apple-gray: #86868b;
+  --color-apple-blue-100: #2997ff;
+  --color-apple-blue-200: #0077ed;
+  --color-apple-blue-300: #0071e3;
+  --color-apple-blue-400: #006edb;
+
+  /* 과제에서 500px로 요구했으나 580px로 정정  - 카드 높이 고정 값 */
+  --card-size: 36.25rem;
+
+  /* 텍스트 크기 --text로 시작 : 12, 14, 16까지는 기존 시스템에 있음 */
+  /* 12,14,16,18,20,24,30,36,48,60,72,96,120 : 총 14가지 사이즈가 기본 제공 */
+  /* --text-xs: .75rem;
+  --text-sm: .875rem; 
+  --text-base: 1rem; */
+  --text-17: 1.0625rem;
+  --text-17--line-height: calc(1.6 / 1.0625);
+  --text-19: 1.1875rem;
+  --text-19--line-height: calc(1.75 / 1.1875);
+  --text-21: 1.3125rem;
+  --text-21--line-height: calc(1.85 / 1.3125);
+  --text-32: 2rem;
+  --text-32--line-height: 1;
+  --text-40: 2.5rem;
+  --text-17--line-height: 1;
+
+  /* spacing */
+  /* 8px->2, 12px->3, 16px->4, 40px->10, 60px->없음 */
+  --spacing-15: 3.75rem;
+
+  /* 애플 제품 배경이미지 */
+  --ipad-pro: url(/src/assets/apple/ipad_pro.jpeg);
+  --ipad-air: url(/src/assets/apple/ipad_air.jpeg);
+  --airpods-pro: url(/src/assets/apple/airpods_pro.jpeg);
+  --iphone15: url(/src/assets/apple/iphone15.jpeg);
+  --iphone15-pro: url(/src/assets/apple/iphone15_pro.jpeg);
+  --apple-watch: url(/src/assets/apple/apple_watch.jpeg);
+  --macbook-air: url(/src/assets/apple/macbook_air.jpeg);
+  /* Wide 배경이미지 */
+  --ipad-pro-wide: url(/src/assets/apple/ipad_pro_wide.jpeg);
+  --ipad-air-wide: url(/src/assets/apple/ipad_air_wide.jpeg);
+  --iphone15-pro-wide: url(/src/assets/apple/iphone15_pro_wide.jpeg);
+
+  /* 2배율 배경이미지 */
+  --ipad-pro-2x: url(/src/assets/apple/ipad_pro_2x.jpeg);
+  --ipad-air-2x: url(/src/assets/apple/ipad_air_2x.jpeg);
+  --airpods-pro-2x: url(/src/assets/apple/airpods_pro_2x.jpeg);
+  --iphone15-2x: url(/src/assets/apple/iphone15_2x.jpeg);
+  --iphone15-pro-2x: url(/src/assets/apple/iphone15_pro_2x.jpeg);
+  --apple-watch-2x: url(/src/assets/apple/apple_watch_2x.jpeg);
+  --macbook-air-2x: url(/src/assets/apple/macbook_air_2x.jpeg);
+  /* 2배율 Wide 배경이미지 */
+  --ipad-pro-wide-2x: url(/src/assets/apple/ipad_pro_wide_2x.jpeg);
+  --ipad-air-wide-2x: url(/src/assets/apple/ipad_wide_2x.jpeg);
+  --iphone15-pro-wide-2x: url(/src/assets/apple/iphone15_pro_wide_2x.jpeg);
+
+  /* 1배율/2배율 배경이미지 */
+  --ipad-pro-set: image-set(
+    url("/src/assets/apple/ipad_pro.jpeg") 1x,
+    url("/src/assets/apple/ipad_pro_2x.jpeg") 2x
+  );
+  --ipad-pro-wide-set: image-set(
+    url("/src/assets/apple/ipad_pro_wide.jpeg") 1x,
+    url("/src/assets/apple/ipad_pro_wide_2x.jpeg") 2x
+  );
+  --ipad-air-set: image-set(
+    url("/src/assets/apple/ipad_air.jpeg") 1x,
+    url("/src/assets/apple/ipad_air.jpeg") 2x
+  );
+  --ipad-air-wide-set: image-set(
+    url("/src/assets/apple/ipad_air_wide.jpeg") 1x,
+    url("/src/assets/apple/ipad_air_wide_2x.jpeg") 2x
+  );
+  --iphone15-pro-set: image-set(
+    url("/src/assets/apple/iphone15_pro.jpeg") 1x,
+    url("/src/assets/apple/iphone15_pro_2x.jpeg") 2x
+  );
+  --iphone15-pro-wide-set: image-set(
+    url("/src/assets/apple/iphone15_pro_wide.jpeg") 1x,
+    url("/src/assets/apple/iphone15_pro_wide_2x.jpeg") 2x
+  );
+  --apple-watch-set: image-set(
+    url("/src/assets/apple/apple_watch.jpeg") 1x,
+    url("/src/assets/apple/apple_watch_2x.jpeg") 2x
+  );
+  --airpods-pro-set: image-set(
+    url("/src/assets/apple/airpods_pro.jpeg") 1x,
+    url("/src/assets/apple/airpods_pro_2x.jpeg") 2x
+  );
+  --iphone15-set: image-set(
+    url("/src/assets/apple/iphone15.jpeg") 1x,
+    url("/src/assets/apple/iphone15_2x.jpeg") 2x
+  );
+  --macbook-air-set: image-set(
+    url("/src/assets/apple/macbook_air.jpeg") 1x,
+    url("/src/assets/apple/macbook_air_2x.jpeg") 2x
+  );
+  --wwdc24-set: image-set(
+    url("/src/assets/apple/wwdc24.jpeg") 1x,
+    url("/src/assets/apple/wwdc24_2x.jpeg") 2x
+  );
+}
+
+/* 사용자 정의 컴포넌트 */
+@layer components {
+  /* 애플 카드 컴포넌트 스타일 */
+  .apple-card {
+    @apply bg-apple-white text-apple-black bg-no-repeat bg-center bg-cover h-(--card-size) flex flex-col gap-2 lg:gap-3 items-center pt-10 text-center;
+
+    h2 {
+      @apply text-32 lg:text-40;
+    }
+
+    p:nth-of-type(1) {
+      @apply text-19 lg:text-21;
+
+      span {
+        @apply block;
+      }
+    }
+
+    p:nth-of-type(2) {
+      @apply text-17 text-apple-gray;
+    }
+
+    div {
+      @apply flex gap-4;
+
+      a:first-child {
+        @apply text-xs lg:text-sm p-2 bg-blue-400 text-white inline-flex justify-center items-center rounded-2xl;
+      }
+
+      a:last-child {
+        @apply text-xs lg:text-sm p-2 border border-current text-current inline-flex justify-center items-center rounded-2xl;
+      }
+    }
+  }
+}
+
+/* 배경이미지를 적용하기 전 카드 컴포넌트 영역을 확인할 목적으로 임시로 적용한 스타일  */
+/* @layer components{
+  .apple-container{
+    article:nth-of-type(odd){
+      @apply bg-amber-300;
+    }
+    article:nth-of-type(even){
+      @apply bg-green-300;
+    }
+  }
+} */

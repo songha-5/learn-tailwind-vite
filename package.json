@@ -7,11 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "format:check": "prettier . --check",
+    "format": "prettir . --write"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "tailwindcss": "^4.1.18",
     "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "prettier": "^3.7.4"
   }
 }

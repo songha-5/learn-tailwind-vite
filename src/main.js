@@ -1,4 +1,5 @@
 import "./style.css";
+import profile from "/src/assets/images/character-01.jpg";
 
 // TailwindCSS 4.X 주요 특징 출력
 const showTailwindFeatures = () => {

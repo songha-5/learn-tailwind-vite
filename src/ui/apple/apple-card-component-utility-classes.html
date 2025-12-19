@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple - 카드 컴포넌트(Tailwindcss)</title>
+    <link rel="icon" href="/favicon/apple-light.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/favicon/apple-dark.svg" media="(prefers-color-scheme: dark)" />
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <a href="/index.html" class="block mx-2 p-2">메인 페이지 이동</a>
+  <h1 class="m-4 text-3xl text-blue-950 font-bold">Apple 카드 컴포넌트(Tailwindcss)</h1>
+  <body class="font-sans">
+    <div class="apple-container">
+      <!-- iPad Pro -->
+      <article class="apple-card lg:col-span-2 bg-apple-black text-apple-white apple-card bg-(image:--ipad-pro-set) lg:bg-(image:--ipad-pro-wide-set)">
+        <h2>iPad Pro</h2>
+        <p><span class="lg:inline">놀라우리만치 얇다.</span> <span class="lg:inline">엄청나게 강력하다.</span></p>
+        <p>출시일 추후 공개</p>
+        <div>
+          <a href="/">더 알아보기</a>
+          <a href="/">가격 보기</a>
+        </div>
+      </article>
+      <!-- iPad air -->
+      <article class="apple-card lg:col-span-2 apple-card bg-(image:--ipad-air-set) lg:bg-(image:--ipad-air-wide-set)">
+        <h2>iPad air</h2>
+        <p><span>두 가지 사이즈. 더 빠른 칩.</span> <span>무엇이든 거뜬하게.</span></p>
+        <p class="hidden">출시일 추후 공개</p>
+        <div>
+          <a href="/">더 알아보기</a>
+          <a href="/">가격 보기</a>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
